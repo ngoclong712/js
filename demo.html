@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quản Lý Sinh Viên</title>
-<script src="main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Quản Lý Sinh Viên</h1>
-
-<label for="studentCount">Nhập số lượng sinh viên:</label>
-<input type="number" id="studentCount">
-<button onclick="enterStudentInfo()">Nhập Thông Tin Sinh Viên</button>
-
-<div id="studentInfoForm"></div>
-
-<button onclick="displayStudentInfo()">Hiển Thị Thông Tin Sinh Viên</button>
-<div id="studentInfoDisplay"></div>
-<script src="index.js"></script>
-
+    <label for="numStudents">Nhập số lượng sinh viên:</label>
+    <input type="number" id="numStudents" name="numStudents">
+    <button onclick="submitNumStudents()">Submit</button>
+    <button onclick="displayStudentInfo()">Hiển thị thông tin sinh viên</button>
+    <div id="studentFields" style="display: none;">
+        <h2>Thông tin sinh viên</h2>
+        <div id="studentContainer"></div>
+        <button onclick="submitStudents()">Submit</button>
+    </div>
+    <br>
+    <button onclick="clearStudents()">Xóa sinh viên theo ID</button>
+    <button onclick="editStudent()">Sửa thông tin sinh viên theo ID</button>
+    <div id="studentInfoDisplay"></div>
+    <script src="main.js"></script>
 </body>
 </html>
