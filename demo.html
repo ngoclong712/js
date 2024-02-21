@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <label for="numStudents">Nhập số lượng sinh viên:</label>
+    <input type="number" id="numStudents" name="numStudents">
+    <button onclick="submitNumStudents()">Submit</button>
+    <button onclick="displayStudentInfo()">Hiển thị thông tin sinh viên</button>
+    <div id="studentFields" style="display: none;">
+        <h2>Thông tin sinh viên</h2>
+        <div id="studentContainer"></div>
+        <button onclick="submitStudents()">Submit</button>
+    </div>
+    <br>
+    <button onclick="clearStudents()">Xóa sinh viên theo ID</button>
+    <button onclick="editStudent()">Sửa thông tin sinh viên theo ID</button>
+    <div id="studentInfoDisplay"></div>
+    <script src="main.js"></script>
+</body>
+</html>
